@@ -1,20 +1,14 @@
-# TS + Mongo
+# TS - SOLID
 
 ## This is it
 
-This is a initial server with typescript
+This is a initial server with typescript using SOLID
   - typescript
   - jest
   - babel
   - eslint
-  - mongoDb
 
 ## How to start?
-
-  - add on the root folder .env
-    - MONGO_USER=root
-    - MONGO_PASSWORD=InitialPassWord
-    - MONGO_DATABASE=yourDataBase
 
   i'm using yarn, but you can use npm run
 

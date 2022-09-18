@@ -1,6 +1,6 @@
 module.exports = {
   apps : [{
-    name: 'BACK_Sales',
+    name: 'BACK_typescript',
     script: './dist/index.js',
     watch: true,
     max_memory_restart: '512M',
