@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: server-node-deployment
+spec:
+  selector:
+    matchLabels:
+      app: server-node
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: server-node
+    spec:
+      containers:
+        - name: server-node
+          image: server-node
+          ports:
+            - containerPort: 3001
+          imagePullPolicy: Never # Image should not be pulled
+          env:
+            - name: MAX_STAR_WARS_CHARACTERS
+              valueFrom:
+                configMapKeyRef:
+                  name: sw-envs
+                  key: maxStarWarsCharacters

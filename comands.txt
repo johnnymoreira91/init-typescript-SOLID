@@ -1,0 +1,30 @@
+start minibuke
+minikube start
+kubectl get po -A
+or minikube kubectl -- get po -A
+
+docker build -t server-node .
+docker run -d -p 3001:3001 server-node
+
+kubectl apply -f sw-deployment.yaml
+kubectl get pod
+
+eval $(minikube docker-env)
+docker build -t server-node .
+
+minikube ssh 
+docker images
+
+kubectl get deployment
+kubectl delete deployment server-node-deployment
+kubectl apply -f sw-deployment.yaml
+kubectl get pod
+
+kubectl apply -f sw-service.yaml
+kubectl get service
+minikube service sw-service --url
+
+kubectl apply -f envs.yaml
+kubectl apply -f sw-deployment.yaml
+
+minikube stop
