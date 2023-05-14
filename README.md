@@ -27,3 +27,7 @@ This is a initial server with typescript using SOLID
  - kubectl apply -f envs.yaml
  - kubectl apply -f sw-deployment.yaml
 
+### Is it running?
+ - kubectl get pods
+ - kubectl get service
+ - kubectl get deployment

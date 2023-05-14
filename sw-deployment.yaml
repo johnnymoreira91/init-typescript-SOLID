@@ -19,8 +19,8 @@ spec:
             - containerPort: 3001
           imagePullPolicy: Never # Image should not be pulled
           env:
-            - name: MAX_STAR_WARS_CHARACTERS
+            - name: NODE_ENV
               valueFrom:
                 configMapKeyRef:
                   name: sw-envs
-                  key: maxStarWarsCharacters
+                  key: node_env

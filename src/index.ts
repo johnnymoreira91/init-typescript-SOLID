@@ -1,4 +1,4 @@
-import app from "@infra/server"
+import app from '@infra/server'
 
 if (process.env.NODE_ENV === 'dev') {
   Connect(3001, 'dev')
